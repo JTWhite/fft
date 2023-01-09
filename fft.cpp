@@ -1,4 +1,3 @@
-
 #include <fstream>
 #include <string>
 #include <cmath>
@@ -53,7 +52,7 @@ void fft_rec(std::complex<double> *x, int N)
 	}
 
 	// recursively splits the odd and even functions - results in 
-  // array of bit reversal order
+    // array of bit reversal order
 	fft_rec(even, N/2);
 	fft_rec(odd, N/2);
     
@@ -73,11 +72,11 @@ int main ( void )
 
     int count = 0;
     
-    /* prepare a cosine wave off the fly  */
+    // generate a cosine wave on the fly
     for (int i = 0; i < n; i++)
         signal[i] = cos(512 * 2*M_PI*i/n);
     
-    fft(signal, out, n); //compute the fft()
+    fft(signal, out, n); //compute the fft
     
     //stream data to .txt file
     std::ofstream outfile ("data.txt");
