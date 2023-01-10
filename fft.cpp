@@ -65,7 +65,7 @@ void fft_rec(std::complex<double> *x, int N)
 }
 
 
-int main ( void )
+int main (void)
 {
 	std::complex<double> out[n];
     double signal[n];
